@@ -340,6 +340,7 @@ body {
   font-weight: bold;
   position: relative;
   padding-bottom: 0.8rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main .process__item h3:after {
