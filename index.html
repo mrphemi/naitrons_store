@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Naitrons Store</title>
+  </head>
+  <body>
+    <div class="overlay first"></div>
+    <div class="overlay second"></div>
+    <div class="overlay third"></div>
+    <nav class="nav">
+      <a href="#" class="nav__logo">
+        <img src="./assets/group-2.svg" alt="Company logo" />
+      </a>
+      <ul class="nav__menu">
+        <li class="nav__link"><a href="#">home</a></li>
+        <li class="nav__link"><a href="#">pricing</a></li>
+        <li class="nav__link"><a href="#">merch</a></li>
+        <li class="nav__link"><a href="#">about</a></li>
+        <li class="nav__link"><a href="#">blog</a></li>
+        <li class="nav__hamburger">
+          <img src="./assets/bar-chart-2.svg" alt="Camburger menu" />
+        </li>
+      </ul>
+    </nav>
+    <div class="main">
+      <div class="intro">
+        <div class="intro__heading">
+          <h1 class="hide">Create a <br /><span>Bespoke</span> Store</h1>
+        </div>
+        <div class="intro__text">
+          <p class="hide">
+            Do not let your curiosity get the best of you even if you are being
+            a piece of shit. Do not let your curiosity get the best of you even
+            if you are being a piece of shit.
+          </p>
+        </div>
+        <button class="intro__btn">Create a store</button>
+      </div>
+      <div class="featured_image">
+        <img src="./assets/pexels-photo-1170412@2x.png" alt="Featured image" />
+      </div>
+      <div class="process">
+        <div class="process__item one">
+          <h3>CREATE YOUR STORE .1</h3>
+          <p>
+            Do not let your curiosity get the best of you even if you are being
+            a piece of shit.
+          </p>
+          <a href="#">Click here</a>
+        </div>
+        <div class="process__item two">
+          <h3>DESIGN & ORDER .2</h3>
+          <p>
+            Do not let your curiosity get the best of you even if you are being
+            a piece of shit.
+          </p>
+          <a href="#">Click here</a>
+        </div>
+        <div class="process__item three">
+          <h3>FUFILMENT .3</h3>
+          <p>
+            Do not let your curiosity get the best of you even if you are being
+            a piece of shit.
+          </p>
+          <a href="#">Click here</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="social_icons">
+        <a href="#" class="social_icon facebook">
+          <img src="./assets/social.svg" alt="facebook icon" />
+        </a>
+        <a href="#" class="social_icon instagram">
+          <img src="./assets/instagram.svg" alt="instagram icon" />
+        </a>
+        <a href="#" class="social_icon twitter">
+          <img src="./assets//twitter.svg" alt="twitter icon" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
+
+    <script>
+      // Overlay Animations
+      TweenMax.to(".first", 1.5, {
+        delay: 0.1,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+      TweenMax.to(".second", 1.5, {
+        delay: 0.3,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+      TweenMax.to(".third", 1.5, {
+        delay: 0.7,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+      // nav and logo animations
+      TweenMax.from(".nav__logo", 1.5, {
+        delay: 1,
+        y: "-150",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".nav__menu .nav__link", 1.5, {
+        delay: 1.4,
+        y: "-150",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".nav__menu .nav__hamburger", 1.5, {
+        delay: 1.8,
+        y: "-150",
+        ease: Expo.easeInOut,
+      });
+      // header animations
+      TweenMax.from(".intro__heading .hide", 1.5, {
+        delay: 2,
+        y: "100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".intro__text .hide", 1.5, {
+        delay: 2.4,
+        y: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".intro__btn", 1.5, {
+        delay: 2.5,
+        x: "-100%",
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+      // featured image animations
+      TweenMax.from(".featured_image", 1.5, {
+        delay: 2.2,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+      // process list animations
+      TweenMax.from(".process__item.one", 1.5, {
+        delay: 2.5,
+        opacity: 0,
+        y: "100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".process__item.two", 1.5, {
+        delay: 2.7,
+        opacity: 0,
+        y: "100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".process__item.three", 1.5, {
+        delay: 3,
+        opacity: 0,
+        y: "100%",
+        ease: Expo.easeInOut,
+      });
+      // social icons animations
+      TweenMax.from(".facebook", 1.5, {
+        delay: 3.1,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".instagram", 1.5, {
+        delay: 3.3,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".twitter", 1.5, {
+        delay: 3.5,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+    </script>
+  </body>
+</html>
