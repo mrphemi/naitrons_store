@@ -14,7 +14,7 @@ if (window.screen.width < 768) {
 
   closeNav.addEventListener("click", () => {
     TweenMax.to(menu, 0.5, {
-      y: "-100",
+      y: "-100%",
       opacity: 0,
       ease: Expo.easeInOut,
     });
