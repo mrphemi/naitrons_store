@@ -20,10 +20,16 @@
         <li class="nav__link"><a href="#">merch</a></li>
         <li class="nav__link"><a href="#">about</a></li>
         <li class="nav__link"><a href="#">blog</a></li>
-        <li class="nav__hamburger">
-          <img src="./assets/bar-chart-2.svg" alt="Camburger menu" />
+        <li class="nav__close_btn">
+          <img
+            src="./assets//close-outline.svg"
+            alt="close icon for navigation"
+          />
         </li>
       </ul>
+      <li class="nav__hamburger">
+        <img src="./assets/bar-chart-2.svg" alt="Hamburger icon" />
+      </li>
     </nav>
     <div class="main">
       <div class="intro">
@@ -85,103 +91,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
 
-    <script>
-      // Overlay Animations
-      TweenMax.to(".first", 1.5, {
-        delay: 0.1,
-        top: "-100%",
-        ease: Expo.easeInOut,
-      });
-      TweenMax.to(".second", 1.5, {
-        delay: 0.3,
-        top: "-100%",
-        ease: Expo.easeInOut,
-      });
-      TweenMax.to(".third", 1.5, {
-        delay: 0.7,
-        top: "-100%",
-        ease: Expo.easeInOut,
-      });
-      // nav and logo animations
-      TweenMax.from(".nav__logo", 1.5, {
-        delay: 1,
-        y: "-150",
-        ease: Expo.easeInOut,
-      });
-
-      TweenMax.from(".nav__menu .nav__link", 1.5, {
-        delay: 1.4,
-        y: "-150",
-        ease: Expo.easeInOut,
-      });
-
-      TweenMax.from(".nav__menu .nav__hamburger", 1.5, {
-        delay: 1.8,
-        y: "-150",
-        ease: Expo.easeInOut,
-      });
-      // header animations
-      TweenMax.from(".intro__heading .hide", 1.5, {
-        delay: 2,
-        y: "100%",
-        ease: Expo.easeInOut,
-      });
-
-      TweenMax.from(".intro__text .hide", 1.5, {
-        delay: 2.4,
-        y: "-100%",
-        ease: Expo.easeInOut,
-      });
-
-      TweenMax.from(".intro__btn", 1.5, {
-        delay: 2.5,
-        x: "-100%",
-        opacity: 0,
-        ease: Expo.easeInOut,
-      });
-      // featured image animations
-      TweenMax.from(".featured_image", 1.5, {
-        delay: 2.2,
-        opacity: 0,
-        ease: Expo.easeInOut,
-      });
-      // process list animations
-      TweenMax.from(".process__item.one", 1.5, {
-        delay: 2.5,
-        opacity: 0,
-        y: "100%",
-        ease: Expo.easeInOut,
-      });
-
-      TweenMax.from(".process__item.two", 1.5, {
-        delay: 2.7,
-        opacity: 0,
-        y: "100%",
-        ease: Expo.easeInOut,
-      });
-
-      TweenMax.from(".process__item.three", 1.5, {
-        delay: 3,
-        opacity: 0,
-        y: "100%",
-        ease: Expo.easeInOut,
-      });
-      // social icons animations
-      TweenMax.from(".facebook", 1.5, {
-        delay: 3.1,
-        opacity: 0,
-        ease: Expo.easeInOut,
-      });
-      TweenMax.from(".instagram", 1.5, {
-        delay: 3.3,
-        opacity: 0,
-        ease: Expo.easeInOut,
-      });
-      TweenMax.from(".twitter", 1.5, {
-        delay: 3.5,
-        opacity: 0,
-        ease: Expo.easeInOut,
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -12,14 +12,6 @@
 
 body {
   background-color: #151625;
-  position: relative;
-  @media screen and(min-width: 1440px) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
 }
 
 .hide {
@@ -46,46 +38,82 @@ body {
   padding-right: 5rem;
   &__logo {
     background-color: #db3744;
+    width: 9rem;
+    height: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 1rem;
-    @media screen and (min-width: 1280px) {
-      width: 5%;
-      padding: 1rem 0.5rem;
-    }
     img {
-      width: 50%;
-      @media screen and (min-width: 1280px) {
-        width: 50%;
-      }
+      width: 5.2rem;
+      height: 4.8rem;
     }
   }
   &__menu {
-    margin-left: auto;
-    align-self: center;
-    display: flex;
     list-style-type: none;
-    padding: 2rem 0;
-    @media screen and (min-width: 1280px) {
-      padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    background-color: #db3744;
+    z-index: 99;
+    @media screen and (min-width: 768px) {
+      position: static;
+      flex-direction: row;
+      width: auto;
+      height: auto;
+      margin-left: auto;
+      align-self: center;
+      background-color: transparent;
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   &__link {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.72px;
     text-transform: capitalize;
     color: #ffffff;
-    opacity: 0.64;
-    margin-right: 4rem;
     font-family: "Montserrat", sans-serif;
+    margin-bottom: 5rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 768px) {
+      opacity: 0.64;
+      margin-bottom: 0;
+      margin-right: 4rem;
+    }
     a {
       color: inherit;
       text-decoration: none;
     }
   }
 
+  &__close_btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+    img {
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
   &__hamburger {
     cursor: pointer;
+    margin-left: auto;
+    align-self: center;
+    @media screen and (min-width: 768px) {
+      margin-left: 0;
+    }
     img {
       width: 100%;
     }
@@ -111,13 +139,24 @@ body {
       width: 35%;
     }
     &__heading {
-      margin-bottom: 1rem;
       width: 100%;
-      height: 14rem;
+      height: 19.2rem;
       position: relative;
       overflow: hidden;
+      @media screen and (min-width: 768px) {
+        height: 12.8rem;
+      }
       @media screen and (min-width: 1280px) {
         width: 120%;
+      }
+      @media screen and (min-width: 1366px) {
+        height: 13.1rem;
+      }
+      @media screen and (min-width: 1440px) {
+        height: 14.2rem;
+      }
+      @media screen and (min-width: 1920px) {
+        height: 17.6rem;
       }
       h1 {
         font-size: 5.2rem;
@@ -140,20 +179,24 @@ body {
       }
     }
     &__text {
-      margin-bottom: 1rem;
-      width: 70%;
-      height: 8rem;
+      margin: 3.5rem 0;
+      height: 11.6rem;
       position: relative;
       overflow: hidden;
+      @media screen and (min-width: 768px) {
+        height: 5.8rem;
+        width: 70%;
+      }
       @media screen and (min-width: 1024px) {
         width: 60%;
       }
       @media screen and (min-width: 1280px) {
-        height: 11rem;
+        height: 7.7rem;
         width: 100%;
       }
       @media screen and (min-width: 1920px) {
         width: 80%;
+        height: 5.8rem;
       }
       p {
         font-size: 1.6rem;
@@ -164,12 +207,13 @@ body {
     }
     &__btn {
       background-color: #db3744;
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 600;
       color: #ffffff;
-      border: none;
+      border: 1px solid #db3744;
       border-radius: 0.5rem;
-      padding: 1rem 1.5rem;
+      width: 18rem;
+      height: 5.2rem;
     }
   }
   .featured_image {
@@ -205,7 +249,6 @@ body {
     }
     @media screen and (min-width: 1920px) {
       width: 15%;
-      justify-content: space-evenly;
     }
     &__item {
       margin-bottom: 5rem;
@@ -245,6 +288,7 @@ body {
       }
       p {
         font-size: 1.6rem;
+        letter-spacing: 0.86px;
         margin: 1.5rem 0 2rem;
         opacity: 0.64;
         @media screen and (min-width: 768px) {
@@ -270,12 +314,11 @@ body {
 
 footer {
   padding: 7rem 5rem 2rem;
-  @media screen and (min-width: 1920px) {
-    padding: 0 5rem 2rem;
-  }
   .social_icons {
     display: flex;
-    justify-content: flex-end;
+    @media screen and (min-width: 1280px) {
+      justify-content: flex-end;
+    }
     .social_icon {
       color: #ffffff;
       margin-right: 3rem;
