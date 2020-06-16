@@ -323,13 +323,25 @@ body {
 
 footer {
   padding: 7rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
   @media screen and (min-width: 768px) {
     padding: 7rem 5rem 2rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .copyright {
+    color: #ffffff;
+    opacity: 0.64;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
   }
   .social_icons {
     display: flex;
-    @media screen and (min-width: 1280px) {
-      justify-content: flex-end;
+    margin-bottom: 3rem;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
     }
     .social_icon {
       color: #ffffff;

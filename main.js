@@ -1,23 +1,33 @@
 const hamburger = document.querySelector(".nav__hamburger");
 const menu = document.querySelector(".nav__menu");
 const closeNav = document.querySelector(".nav__close_btn");
+const navLinks = document.querySelectorAll(".nav__link");
+
+// Open and close mobile navigation
+function closeNavigation() {
+  TweenMax.to(menu, 0.5, {
+    y: "-100%",
+    opacity: 0,
+    ease: Expo.easeInOut,
+  });
+}
+
+function openNavigation() {
+  TweenMax.to(menu, 0.5, {
+    y: "0",
+    opacity: 1,
+    ease: Expo.easeInOut,
+  });
+}
 
 // mobile nav animations
 if (window.screen.width < 768) {
-  hamburger.addEventListener("click", () => {
-    TweenMax.to(menu, 0.5, {
-      y: "0",
-      opacity: 1,
-      ease: Expo.easeInOut,
-    });
-  });
+  hamburger.addEventListener("click", openNavigation);
 
-  closeNav.addEventListener("click", () => {
-    TweenMax.to(menu, 0.5, {
-      y: "-100%",
-      opacity: 0,
-      ease: Expo.easeInOut,
-    });
+  closeNav.addEventListener("click", closeNavigation);
+
+  [...navLinks].forEach((navLink) => {
+    navLink.addEventListener("click", closeNavigation);
   });
 }
 
