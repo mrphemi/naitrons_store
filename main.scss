@@ -93,6 +93,24 @@ body {
       opacity: 0.64;
       margin-bottom: 0;
       margin-right: 4rem;
+      position: relative;
+      padding-bottom: 0.4rem;
+      &:after {
+        content: "";
+        width: 0;
+        height: 0.2rem;
+        background-color: #db3744;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        transition: width 0.5s ease-in-out;
+      }
+      &:hover {
+        &:after {
+          width: 50%;
+        }
+      }
     }
     a {
       color: inherit;
@@ -215,7 +233,7 @@ body {
       }
     }
     &__btn {
-      background-color: #db3744;
+      background: transparent;
       font-size: 1.7rem;
       font-weight: 600;
       color: #ffffff;
@@ -223,6 +241,28 @@ body {
       border-radius: 0.5rem;
       width: 18rem;
       height: 5.2rem;
+      cursor: pointer;
+      position: relative;
+      outline: none;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #db3744;
+        display: block;
+        z-index: -1;
+        transition: width 0.5s ease-in-out;
+        overflow: hidden;
+      }
+      &:hover {
+        color: #fff;
+        &:after {
+          width: 0;
+        }
+      }
     }
   }
   .featured_image {
