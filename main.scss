@@ -383,11 +383,16 @@ body {
           font-size: 1.4rem;
         }
       }
-
       a {
         text-decoration: none;
         font-size: 1.2rem;
         opacity: 0.25;
+        transition: all 0.5s;
+        &:hover {
+          color: #db3744;
+          opacity: 1;
+          transform: scale(1.5);
+        }
       }
     }
   }

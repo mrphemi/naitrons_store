@@ -577,6 +577,15 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   opacity: 0.25;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main .process__item a:hover {
+  color: #db3744;
+  opacity: 1;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 footer {
