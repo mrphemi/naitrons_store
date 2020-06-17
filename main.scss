@@ -423,6 +423,14 @@ footer {
     .social_icon {
       color: #ffffff;
       margin-right: 3rem;
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.5);
+        path {
+          fill: #db3744;
+          opacity: 0.5;
+        }
+      }
       &:last-of-type {
         margin-right: 0;
       }

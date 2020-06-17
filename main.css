@@ -635,6 +635,18 @@ footer .social_icons {
 footer .social_icons .social_icon {
   color: #ffffff;
   margin-right: 3rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+footer .social_icons .social_icon:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+footer .social_icons .social_icon:hover path {
+  fill: #db3744;
+  opacity: 0.5;
 }
 
 footer .social_icons .social_icon:last-of-type {
