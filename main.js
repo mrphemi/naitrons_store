@@ -115,6 +115,14 @@ TweenMax.from(".process__item.three", 1.5, {
   y: "100%",
   ease: Expo.easeInOut,
 });
+
+// copy right text animations
+TweenMax.from(".copyright", 1.5, {
+  delay: 3,
+  opacity: 0,
+  ease: Expo.easeInOut,
+});
+
 // social icons animations
 TweenMax.from(".facebook", 1.5, {
   delay: 3.1,
